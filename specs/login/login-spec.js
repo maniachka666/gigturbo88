@@ -8,7 +8,7 @@ describe('Interests', () => {
     // Deleting cookies after each session will allow us to have new session before next test starts
     browser.deleteCookies();
 });
-   it('Should have Animal Care and Animal training under interests test', () => {
+   it('Should have Animal Care and Animal training under interests', () => {
      browser.url(homeUrl);
     // Press Get Started button
      LoginPage.getStartedButton.waitForClickable()
