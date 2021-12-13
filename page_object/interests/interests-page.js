@@ -1,6 +1,6 @@
 "use strict";
 
-class Login {
+class Interests {
     // Reusable selector getters that will help us to avoid selector duplicates
     get buttonLogInHomePage() { return $('[href="/login"]'); }
     get buttonSignUpLog() { return $('[class="Button_button__sL3tD Button_signupButton__pGlka undefined"]'); }
@@ -21,11 +21,17 @@ class Login {
     get animalCareButton() { return $('span=Animal Care')}
     get animalTrainingButton() { return $('span=Animal Training')}
     get gigPageVerify() { return $('[class="row InfoScreenOne_headerContainer__1luD_"]')}
+    get platformsPageVerify() { return $('[class="platforms_headerContainer__1XNeK"]')}
+    get schedulePageVerify() { return $('h1=When do you prefer to work?');}
+    get setManualyButton() { return $('[style="cursor: pointer;"]')}
+    get emailPageVerify() { return $('[class="row email_headerContainer__2aspB"]')}
+    get userIcon() { return $('[class="TopMenu_noImage__1RMpC"]')}
+    get deleteAccount() { return $('span=Delete Account')}
     // Helper method to avoid code duplication
     // Login to Homepage Gigturbo
 
     
-    login(phone = '3473236255', pin = '000000') {
+    signup(phone = '3473236255', pin = '000000') {
         // Wait for load get started page
         this.placeholderPhoneNumber.waitForClickable();
         // Type phone number in placeholder
@@ -37,4 +43,4 @@ class Login {
         this.placeholderVerifyCode.setValue(pin);
     }
 }
-module.exports = new Login();
+module.exports = new Interests();
